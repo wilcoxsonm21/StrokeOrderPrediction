@@ -18,16 +18,16 @@ In following the paper, we have results with and without the randomized resize c
 In our experiement, the augmented data performed significantly worse on the test, training, and validation sets. We used the same learning rate and learning schedule as the original paper, but our loss plots suggests oscillation due to too high of a learning rate. We look to investigate this in the future. Notably, the model does not seem to ovefit, which suggests that we should be able to get better results with more fine tuning. 
 
 Below is the loss for training and validation for the augmented data (with random resize cropping, across tens of epochs):
-<img width="588" alt="Training and Validation Loss Over Time, Augmented" src="https://github.com/wilcoxsonm21/StrokeOrderPrediction/assets/63686025/58b9ae31-aad7-475f-8211-404006a70c50">
+<img width="588" alt="Training and Validation Loss Over Time, Augmented" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Training and Validation Loss Over Time, Augmented.png">
 
 Below is the loss for training and validation across tens of epochs with no random resize cropping:
-<img width="580" alt="Screenshot 2023-07-31 at 10 20 59 PM" src="https://github.com/wilcoxsonm21/StrokeOrderPrediction/assets/63686025/0221c45f-6c2b-49cd-855c-02d7303c6004">
+<img width="588" alt="Training and Validation Loss Over Time, Not Augmented" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Training and Validation Loss Over Time, Not Augmented.png">
 
 The test loss for the augmented test (690 epochs into training, selected by validation) was 0.0081, while the test loss for the version with no augmentation was 0.0056 (800 epochs). Both showed very good performance on simpler characters and radicals that were likely repeated many times in training, and showed room for improvement on more complicated characters. 
 
 Suprisingly, the non-augmented data seems to get signficantly better test performance. This suggests that model overfitting is not the primary concern, but rather model bias to be able to compensate for additional variation added by augmentation. However, the fact that the paper got better results with augmentation suggests changes to the learning rate/additional fine tuning with hyperparameters can yield a better result with augmentation. The gap in performance between validation and test and this phenomena both warrent further investigation. 
 
-An example of model predicting a common radical in test set almost perfectly (top is prediction, middle is target, bottom is input)
+An example of model predicting a charactercommon radical in test set almost perfect (top is prediction, middle is target, bottom is input)
 
 <img width="143" alt="Screenshot 2023-07-31 at 10 25 48 PM" src="https://github.com/wilcoxsonm21/StrokeOrderPrediction/assets/63686025/d1a812e1-f4cc-4c47-a95f-7d6851d67cc6">
 
