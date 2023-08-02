@@ -18,6 +18,7 @@ In following the paper, we have results with and without the randomized resize c
 In our experiement, the augmented data performed significantly worse on the test, training, and validation sets. We used the same learning rate and learning schedule as the original paper, but our loss plots suggests oscillation due to too high of a learning rate. We look to investigate this in the future. Notably, the model does not seem to ovefit, which suggests that we should be able to get better results with more fine tuning. 
 
 Below is the loss for training and validation for the augmented data (with random resize cropping, across tens of epochs):
+
 <img width="588" alt="Training and Validation Loss Over Time, Augmented" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Training and Validation Loss Over Time, Augmented.png">
 
 Below is the loss for training and validation across tens of epochs with no random resize cropping:
