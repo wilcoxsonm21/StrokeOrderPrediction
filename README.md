@@ -23,23 +23,23 @@ Below is the loss for training and validation for the augmented data (with rando
 Below is the loss for training and validation across tens of epochs with no random resize cropping:
 <img width="588" alt="Training and Validation Loss Over Time, Not Augmented" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Training and Validation Loss Over Time, Not Augmented.png">
 
-The test loss for the augmented test (690 epochs into training, selected by validation) was 0.0081, while the test loss for the version with no augmentation was 0.0056 (800 epochs). Both showed very good performance on simpler characters and radicals that were likely repeated many times in training, and showed room for improvement on more complicated characters. 
+The test loss for the augmented test (260 epochs into training, selected by validation) was 0.0086, while the test loss for the version with no augmentation was 0.0056 (800 epochs). Both showed very good performance on simpler characters and radicals that were likely repeated many times in training, and showed room for improvement on more complicated characters. 
 
 Suprisingly, the non-augmented data seems to get signficantly better test performance. This suggests that model overfitting is not the primary concern, but rather model bias to be able to compensate for additional variation added by augmentation. However, the fact that the paper got better results with augmentation suggests changes to the learning rate/additional fine tuning with hyperparameters can yield a better result with augmentation. The gap in performance between validation and test and this phenomena both warrent further investigation. 
 
 An example of model predicting a charactercommon radical in test set almost perfect (top is prediction, middle is target, bottom is input)
 
-<img width="143" alt="Screenshot 2023-07-31 at 10 25 48 PM" src="https://github.com/wilcoxsonm21/StrokeOrderPrediction/assets/63686025/d1a812e1-f4cc-4c47-a95f-7d6851d67cc6">
+<img width="143" alt="Radical, Augmented" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Radical, Augmented.png">
 
 Part of this accuracy may be attributed to the fact that while the character was not in the train set, this subsequence (or at least the first three strokes which compromise a common radical) was in the training set. 
 
 We see that for a more complicated character, while the general order and strokes are captured, some details are lost
 
-<img width="146" alt="Screenshot 2023-07-31 at 10 27 51 PM" src="https://github.com/wilcoxsonm21/StrokeOrderPrediction/assets/63686025/498d65fa-8ab4-4ee8-b951-1b648ce52c58">
+<img width="146" alt="Right Idea, Augmented" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Right Idea, Augmented.png">
 
 Finally, some characters become a bit blurry and inaccurate. 
 
-<img width="152" alt="Screenshot 2023-07-31 at 10 42 48 PM" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Struggling Character, Not Augmented.png">
+<img width="152" alt="Blurry, Augmented" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Blurry, Augmented.png">
 
 An example of better performance on complicated characters without augmentation
 
