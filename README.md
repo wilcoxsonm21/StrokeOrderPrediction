@@ -48,6 +48,6 @@ An example of better performance on complicated characters without augmentation
 
 The paper seemed to only have crisp output images that while sometimes inaccurate did not have the same fuzzing issue. 
 
-This futher supports the notion that more fine-tuning can be used, although the paper did not mention using such enhancements.
+This further supports the notion that more fine-tuning can be used, although the paper did not mention using such enhancements.
 
 We look to investigate these optimizations in the future, and also apply the pretrained model towards zero shot recognition of handwritten Chinese characters. 
