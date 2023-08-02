@@ -6,7 +6,7 @@ The approach is based on this paper: https://www.mdpi.com/2076-3417/13/3/1750
 
 The data used for trainign is the same as the data located here: https://github.com/chanind/hanzi-writer-data
 
-That data was originally in an SVG form that was embedding in JSON documents to power animated Javascript writing of Chinese characters. I preprocessed this data to create a dataaset of 256x256 PNGS, which were further processed by my attached Jupyter notebook. The set of 256x256 pngs is located on Kaggle: https://www.kaggle.com/datasets/maxwilcoxson/hanzi-writer-dataset-png
+That data was originally in an SVG form that was embedding in JSON documents to power animated writing of Chinese characters to add to websites using Javascript. I preprocessed this data to create a dataaset of 256x256 PNGs, which were further processed by my attached Jupyter notebook. The set of 256x256 pngs is located on Kaggle: https://www.kaggle.com/datasets/maxwilcoxson/hanzi-writer-dataset-png
 
 The data used is covered on the license https://github.com/skishore/makemeahanzi/blob/master/APL/english/ARPHICPL.TXT. 
 
@@ -31,7 +31,7 @@ An example of model predicting a charactercommon radical in test set almost perf
 
 <img width="143" alt="Radical, Augmented" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Radical, Augmented.png">
 
-Part of this accuracy may be attributed to the fact that while the character was not in the train set, this subsequence (or at least the first three strokes which compromise a common radical) was in the training set. 
+Part of this accuracy may be attributed to the fact that while the character was not in the train set, this subsequence (or at least the first four strokes which compromise a common radical) was in the training set. 
 
 We see that for a more complicated character, while the general order and strokes are captured, some details are lost
 
@@ -47,7 +47,6 @@ An example of better performance on complicated characters without augmentation
 
 The paper seemed to only have crisp output images that while sometimes inaccurate did not have the same fuzzing issue. 
 
-This futhe|
-r supports the notion that more fine tuning can be used, although the paper did not mention using such enhancements.
+This futher supports the notion that more fine tuning can be used, although the paper did not mention using such enhancements.
 
-We look to investigate these optimizations in the future, and also apply the pretrained model towards zero shot recognition of handwritten chinese characters. 
+We look to investigate these optimizations in the future, and also apply the pretrained model towards zero shot recognition of handwritten Chinese characters. 
