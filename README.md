@@ -39,14 +39,15 @@ We see that for a more complicated character, while the general order and stroke
 
 Finally, some characters become a bit blurry and inaccurate. 
 
-<img width="152" alt="Screenshot 2023-07-31 at 10 42 48 PM" src="https://github.com/wilcoxsonm21/StrokeOrderPrediction/assets/63686025/f2688007-6b87-442f-975a-2eab7e2d94a2">
+<img width="152" alt="Screenshot 2023-07-31 at 10 42 48 PM" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/Struggling Character, Not Augmented.png">
 
 An example of better performance on complicated characters without augmentation
 
-<img width="139" alt="Screenshot 2023-07-31 at 11 16 22 PM" src="https://github.com/wilcoxsonm21/StrokeOrderPrediction/assets/63686025/1ac57846-013d-46cd-8504-9ac71369273b">
+<img width="139" alt="Screenshot 2023-07-31 at 11 16 22 PM" src="https://raw.githubusercontent.com/wilcoxsonm21/StrokeOrderPrediction/main/More Complicated Character, Not Augmented.png">
 
 The paper seemed to only have crisp output images that while sometimes inaccurate did not have the same fuzzing issue. 
 
-This futher supports the notion that more fine tuning can be used, although the paper did not mention using such enhancements.
+This futhe|
+r supports the notion that more fine tuning can be used, although the paper did not mention using such enhancements.
 
 We look to investigate these optimizations in the future, and also apply the pretrained model towards zero shot recognition of handwritten chinese characters. 
